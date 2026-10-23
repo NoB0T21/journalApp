@@ -28,4 +28,15 @@ public class UserService {
             throw new RuntimeException("Failed to save user entity", e);
         }
     }
+
+    public UserEntity getUser(String userName) {
+        if (userName == null) return null;
+        try {
+            UserEntity data = userEntityRepo.findByEmail(userName);
+            if (data != null) return  data;
+            return  null;
+        } catch (Exception e) {
+          throw new RuntimeException("Failed to grt user", e);
+        }
+    }
 }

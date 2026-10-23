@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 @RestController
-@RequestMapping("/journal")
+@RequestMapping("/api/journals")
 public class JournalEntryController {
     @Autowired
     private JournalEntryService journalEntryService;
